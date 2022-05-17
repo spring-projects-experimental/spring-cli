@@ -1,0 +1,23 @@
+command:
+  name: new-demo
+  description: Create a new demo project
+  options:
+    - name: platform
+      description: platform to target
+      dataType: string
+      defaultValue: azure
+      inputType: select # SELECT (single option)
+      choices:
+        azure: Microsoft Azure
+        lambda: AWS Lambda
+        google: Google Cloud Platform
+    - name: service-name
+      description: The name of the service
+      dataType: string
+      defaultValue: mckesson-service-template
+      inputType: text
+    - name: package-name
+      description: The package name of the service
+      dataType: string
+      defaultValue: com.example.sample
+      inputType: text
