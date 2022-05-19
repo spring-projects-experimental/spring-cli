@@ -29,6 +29,8 @@ ext {
 	set('mavenModelVersion', '3.5.4')
 	set('tikaVersion', '1.18')
 	set('jimfsVersion', '1.2')
+	set('handlebarsVersion', '4.1.2')
+	set('jmustacheVersion', '1.14')
 }
 
 configurations.all {
@@ -50,6 +52,8 @@ dependencies {
 	implementation 'org.apache.ant:ant'
 	implementation 'org.apache.maven:maven-model'
 	implementation 'org.apache.tika:tika-core'
+	implementation 'com.github.jknack:handlebars'
+	implementation 'com.samskivert:jmustache'
 	compileOnly 'org.springframework.experimental:spring-aot'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'com.google.jimfs:jimfs'
@@ -71,6 +75,8 @@ dependencyManagement {
 		dependency "org.apache.ant:ant:${antVersion}"
 		dependency "org.apache.maven:maven-model:${mavenModelVersion}"
 		dependency "org.apache.tika:tika-core:${tikaVersion}"
+		dependency "com.github.jknack:handlebars:${handlebarsVersion}"
+		dependency "com.samskivert:jmustache:${jmustacheVersion}"
 		dependency "com.google.jimfs:jimfs:${jimfsVersion}"
 	}
 	imports {

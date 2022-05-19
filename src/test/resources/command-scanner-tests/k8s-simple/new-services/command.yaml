@@ -1,0 +1,11 @@
+command:
+  description: Create the Kubernetes resource files for the application's services.
+  options:
+    - name: services-with-gusto
+      description: say it loud, say it proud
+      dataType: boolean
+      defaultValue: false
+    - name: services-with-greeting
+      description: what word to use to say hello
+      dataType: string
+      defaultValue: Hello

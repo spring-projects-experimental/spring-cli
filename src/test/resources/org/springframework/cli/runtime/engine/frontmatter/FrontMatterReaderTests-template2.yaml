@@ -1,0 +1,10 @@
+---
+actions:
+  injectMavenDependency:
+    to: pom.xml
+    skip: spring-boot-starter-jpa
+---
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jpa</artifactId>
+  </dependency>

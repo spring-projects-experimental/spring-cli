@@ -1,0 +1,52 @@
+command:
+  description: Create the Kubernetes resource files for the application
+  options:
+    - name: with-gusto
+      description: say it loud, say it proud
+      dataType: boolean
+      defaultValue: false
+      inputType: toggle    # TOGGLE
+  #
+    - name: with-greeting
+      description: what word to use to say hello
+      dataType: string
+      defaultValue: Hello
+      paramLabel: WORD
+      inputType: text     # TEXT
+  #
+    - name: with-additional-message
+      description: Additional message to output
+      dataType: string
+      inputType: textarea     # TEXT AREA
+  #
+    - name: flavor
+      description: Ice Creams Flavors
+      dataType: string
+      defaultValue: strawberry
+      inputType: checkbox    # CHECKBOX (multiple options)
+      choices:
+        vanilla: Valilla
+        chocolate: Chocolate
+        strawberry: Strawberry
+   #
+    - name: platform
+      description: platform to target
+      dataType: string
+      defaultValue: azure
+      inputType: select    # SELECT (single option)
+      choices:
+        azure: Microsoft Azure
+        lambda: AWS Lambda
+        google: Google Cloud Platform
+  #
+    - name: beverage
+      description: What to drink
+      dataType: string
+      defaultValue: water
+      inputType: radio     # RADIO (single option)
+      choices:
+        water: Water
+        milk: Milk
+        coke: Coke
+        coffee: Coffee
+        tea: Tea

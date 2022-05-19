@@ -26,6 +26,8 @@ import org.springframework.cli.support.SpringCliUserConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.reactive.ReactorResourceFactory;
+import org.springframework.shell.MethodTargetRegistrar;
+import org.springframework.shell.command.CommandCatalog;
 import org.springframework.web.reactive.function.client.WebClient;
 
 /**
@@ -36,6 +38,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(SpringCliProperties.class)
 public class SpringCliConfiguration {
+
+
+	@Bean
+	public MethodTargetRegistrar dynamicMethodTargetRegistrar() {
+		return new DynamicMethodTargetRegistrar();
+
+	}
 
     @Bean
     public ReactorResourceFactory reactorClientResourceFactory() {
