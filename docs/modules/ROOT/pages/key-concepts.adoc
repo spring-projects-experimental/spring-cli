@@ -22,7 +22,7 @@ The catalog is hosted on GitHub or GitLab
 
 The commands related to projects catalogs are `catalog list`, `catalog add` and `catalog remove`
 
-== Configuraiton
+f== Configuration
 
 *Configuration*: The CLI provides a configuration system to provide default values to commonly used command options.
 
